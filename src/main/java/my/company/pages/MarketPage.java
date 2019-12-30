@@ -20,7 +20,7 @@ public class MarketPage extends BasePage {
     public void goToTypeOfProducts(String value){
         try {
             element = marketMenu.findElement(By.xpath("//*[@class='n-w-tab__control-caption'][text()='" + value + "']"));
-            waitToBeClickable(driver, element);
+           element.click();
         }catch (Exception e){
             e.printStackTrace();
             element = driver.findElement(By.xpath("//*[@class='n-w-tab__control-caption'][text()='" + value + "']"));

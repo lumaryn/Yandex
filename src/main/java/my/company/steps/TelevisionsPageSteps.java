@@ -1,6 +1,7 @@
 package my.company.steps;
 
 import my.company.pages.TelevisionsPage;
+import org.openqa.selenium.By;
 import ru.yandex.qatools.allure.annotations.Step;
 
 public class TelevisionsPageSteps extends TelevisionsPage {
@@ -33,6 +34,13 @@ public class TelevisionsPageSteps extends TelevisionsPage {
             }
         }
     }
+
+    @Step("На странице отображается {count} элементов")
+    public void countOfAllElements(){
+        waitUntilElementsAppear();
+        int count = driver.findElements(By.xpath("//h3[@class='n-snippet-card2__title']")).size();
+    }
+
 
     @Step("Название первого элемента зафиксировано")
     public void findFirstElementStep(){

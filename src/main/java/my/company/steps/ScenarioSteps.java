@@ -68,8 +68,6 @@ public class ScenarioSteps {
         televisionsPageSteps.chooseOfBrandNameStep("Beats");
     }
 
-
-
     @And("Нажать кнопку Показать подходящие")
     public void showSuitable() {
         televisionsPageSteps.pressButtonStep("кнопка Показать подходящие");
@@ -85,10 +83,8 @@ public class ScenarioSteps {
         televisionsPageSteps.countElementsStep(12);
     }
 
-    @And("Проверить, что на странице 17 элементов")
-    public void countElementsSixteen() {
-        televisionsPageSteps.countElementsStep(17);
-    }
+    @And("Проверить количество элементов на странице")
+    public void countElementsAll() { televisionsPageSteps.countOfAllElements();}
 
     @And("Выбрать первый элемент")
     public void clickOnFirstElement(){
