@@ -14,16 +14,16 @@ public class MarketPage extends BasePage {
         PageFactory.initElements(BaseSteps.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@class='n-w-tab n-w-tab_type_navigation-menu']")
+    @FindBy(xpath = "//*[@class='_3Lwc_UVFq4']/span")
     WebElement marketMenu;
 
     public void goToTypeOfProducts(String value){
         try {
-            element = marketMenu.findElement(By.xpath("//*[@class='n-w-tab__control-caption'][text()='" + value + "']"));
-           element.click();
+            element = marketMenu.findElement(By.xpath("//*[@class='_3Lwc_UVFq4']/span[contains(text(), '" + value + "')]"));
+            element.click();
         }catch (Exception e){
             e.printStackTrace();
-            element = driver.findElement(By.xpath("//*[@class='n-w-tab__control-caption'][text()='" + value + "']"));
+            element = driver.findElement(By.xpath("//*[@class='_3Lwc_UVFq4']/span[contains(text(), '" + value + "')]"));
             element.click();
         }
     }
