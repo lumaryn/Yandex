@@ -31,7 +31,7 @@ public class TelevisionsPage extends BasePage {
    @FindBy(xpath = "//button[contains(.,'Показывать по 48')]")
     WebElement button_AmmountOfElements;
 
-    @FindBy(xpath = "//div[5]/div[2]/div/div/span")
+    @FindBy(xpath = "//div[6]/div[2]/div/div/span")
     WebElement button_ShowTwelve;
 
     @FindBy(xpath = "//h3[@class='n-snippet-card2__title']")
